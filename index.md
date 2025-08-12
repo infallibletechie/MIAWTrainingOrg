@@ -5,7 +5,7 @@
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
    			/* START:: Messaging Window Minimize Listener */
-			window.addEventListener( "onEmbeddedMessagingButtonCreated", () => {
+			window.addEventListener( "onEmbeddedMessagingReady", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
 				embeddedservice_bootstrap.utilAPI.hideChatButton();
