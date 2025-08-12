@@ -13,7 +13,7 @@
 				console.log( "START:: Messaging Window Minimize" );
 				setTimeout(() => {
 					console.log("Delayed for 1 second.");
-					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+					embeddedservice_bootstrap.utilAPI.hideChatButton();
 				}, 1000);
 				console.log( "END:: Messaging Window Minimize" );
 			
