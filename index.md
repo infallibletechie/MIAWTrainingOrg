@@ -7,6 +7,17 @@
 			//Hiding Chat Button on page load
         	embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 
+   			/* START:: Messaging Window Minimize Listener */
+			window.addEventListener( "onEmbeddedMessagingWindowMinimized", ( event ) => {
+			
+				console.log( "START:: Messaging Window Minimize" );
+				console.log( "Event detail: ", JSON.stringify( event.detail ) );
+				embeddedservice_bootstrap.utilAPI.hideChatButton();
+				console.log( "END:: Messaging Window Minimize" );
+			
+			} );
+			/* END:: Messaging Window Minimize Listener */
+
 			embeddedservice_bootstrap.init(
 				'00DHo000002fRR9',
 				'MIAW',
