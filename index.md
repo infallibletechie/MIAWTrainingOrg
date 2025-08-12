@@ -11,9 +11,7 @@
 			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
-				let style = document.createElement("style");
-	            style.innerHTML = "button#minimizedButton-20 {right: -200px !important; display: none;}";
-	            frames['embeddedMessagingFrame'].contentWindow.document.body.appendChild(style);
+				embeddedservice_bootstrap.settings.chatButtonPosition = "";
 				console.log( "END:: Messaging Window Minimize" );
 				
 			} );
@@ -34,14 +32,9 @@
 </script>
 <script type='text/javascript' src='https://infallibletechie2-dev-ed.develop.my.site.com/ESWMIAW1754416406121/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
    <div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #801818; cursor: pointer; color: white">
-         <div onclick="launchChat()">
-            <img 
-               src="<Please use your image>"
-               style="border-radius: 50%; float:left; margin: 5px;"
-               height="50px"
-               width="50px"/>
-	       <h3 style="float:right;">Hi, How can I help you?</h3>
-         </div>
+		<div onclick="launchChat()">
+	    	<h3 style="float:right;">Hi, How can I help you?</h3>
+        </div>
    </div>
    <script>
 	function launchChat() {
