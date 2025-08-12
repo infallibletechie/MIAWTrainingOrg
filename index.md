@@ -11,12 +11,11 @@
 			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
-				setTimeout(() => {
-					console.log("Delayed for 1 second.");
-					embeddedservice_bootstrap.utilAPI.hideChatButton();
-				}, 1000);
+				let style = document.createElement("style");
+	            style.innerHTML = "button#minimizedButton-20 {right: -200px !important; display: none;}";
+	            frames['embeddedMessagingFrame'].contentWindow.document.body.appendChild(style);
 				console.log( "END:: Messaging Window Minimize" );
-			
+				
 			} );
 			/* END:: Messaging Window Minimize Listener */
 
