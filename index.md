@@ -11,7 +11,10 @@
 			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
-				embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+				setTimeout(() => {
+					console.log("Delayed for 1 second.");
+					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+				}, 1000);
 				console.log( "END:: Messaging Window Minimize" );
 			
 			} );
