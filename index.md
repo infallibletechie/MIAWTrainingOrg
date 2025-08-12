@@ -11,7 +11,7 @@
 			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
-				embeddedservice_bootstrap.utilAPI.hideChatButton();
+				embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 				console.log( "END:: Messaging Window Minimize" );
 			
 			} );
