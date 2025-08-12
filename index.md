@@ -8,10 +8,10 @@
         	embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 
    			/* START:: Messaging Window Minimize Listener */
-			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
+			window.addEventListener( "onEmbeddedMessagingButtonCreated", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
-				embeddedservice_bootstrap.settings.chatButtonPosition = "";
+				embeddedservice_bootstrap.utilAPI.hideChatButton();
 				console.log( "END:: Messaging Window Minimize" );
 				
 			} );
