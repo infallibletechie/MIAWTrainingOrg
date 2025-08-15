@@ -8,7 +8,7 @@
 			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
-				alert( "Chat is not closed. It is just minimized" );
+				alert( "Chat is not closed. It is just minimized." );
 				console.log( "END:: Messaging Window Minimize" );
 				
 			} );
