@@ -5,10 +5,10 @@
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
    			/* START:: Messaging Window Minimize Listener */
-			window.addEventListener( "onEmbeddedMessagingReady", () => {
+			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
 			
 				console.log( "START:: Messaging Window Minimize" );
-				embeddedservice_bootstrap.utilAPI.hideChatButton();
+				alert( "Chat is not closed. It is just minimized" );
 				console.log( "END:: Messaging Window Minimize" );
 				
 			} );
@@ -28,27 +28,4 @@
 	};
 </script>
 <script type='text/javascript' src='https://infallibletechie2-dev-ed.develop.my.site.com/ESWMIAW1754416406121/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-   <div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #801818; cursor: pointer; color: white">
-		<div onclick="launchChat()">
-	    	<h3 style="float:right;">Hi, How can I help you?</h3>
-        </div>
-   </div>
-   <script>
-	function launchChat() {
-           embeddedservice_bootstrap.utilAPI.launchChat()
-               .then(() => {
-                   console.log(
-                       'Successfully launched Messaging'
-                   );
-               }).catch(() => {
-                   console.log(
-                       'Some error occurred when launching Messaging'
-                   );
-               }).finally(() => {
-                   console.log(
-                       'Successfully launched Messaging - Finally'
-                   );
-               });
-       }
-   </script>
 </html>
