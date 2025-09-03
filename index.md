@@ -4,16 +4,6 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-   			/* START:: Messaging Window Minimize Listener */
-			window.addEventListener( "onEmbeddedMessagingWindowMinimized", () => {
-			
-				console.log( "START:: Messaging Window Minimize" );
-				alert( "Chat is not closed. It is just minimized." );
-				console.log( "END:: Messaging Window Minimize" );
-				
-			} );
-			/* END:: Messaging Window Minimize Listener */
-
 			embeddedservice_bootstrap.init(
 				'00DHo000002fRR9',
 				'MIAW',
